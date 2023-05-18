@@ -1,0 +1,11 @@
+button{
+    width: 150px;
+    height: 60px;
+
+    border-radius: 20px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    
+    cursor: pointer;
+}
