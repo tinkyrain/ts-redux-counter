@@ -1,12 +1,12 @@
+import { useTypedSelector } from '../hooks/useTypedSelector';
 import './Counter.css';
-import { useSelector } from 'react-redux/es/exports';
 
 const Counter = () => {
-    let count = useSelector(state => state);
-    console.log(count);
+    let { count } = useTypedSelector(state => state.count)
+    
     
     return(
-        <div className='counter'>0</div>
+        <div className='counter'>{count}</div>
     );
 }
 

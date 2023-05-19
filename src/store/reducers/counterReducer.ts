@@ -3,7 +3,7 @@ import { counterState } from "../../types/type";
 import { PLUS_COUNT, MINUS_COUNT, ZERO_COUNT } from "../actions/counterActions";
 
 const defaultState:counterState = {
-    count: 11,
+    count: 0,
 }
 
 export const counterReducer = (state = defaultState, action:counterActoin):counterState => {
