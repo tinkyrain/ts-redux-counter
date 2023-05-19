@@ -1,3 +1,3 @@
-export const PLUS_COUNT = 'ADD_COUNT',
-             MINUS_COUNT = 'ADD_COUNT',
-             ZERO_COUNT = 'ADD_COUNT';
+export const PLUS_COUNT = 'PLUS_COUNT',
+             MINUS_COUNT = 'MINUS_COUNT',
+             ZERO_COUNT = 'ZERO_COUNT';
