@@ -1,13 +1,10 @@
 import './Button.css'
+import { ZERO_COUNT } from '../store/actions/counterActions';
+import { useDispatch } from 'react-redux';
+import { ButtonProps } from '../types/type';
 
-export interface ButtonProps{
-    text?:string,
-    color?:string,
-    bg?:string,
-    borderColor?:string,
-} 
-
-const Button = ({ text = 'Button', color='white', bg='#6161fc', borderColor='#2929fa' }:ButtonProps) => {
+const Button = ({ text = 'Button', color='white', bg='#6161fc', borderColor='#2929fa',actionBtn=ZERO_COUNT}:ButtonProps) => {
+    const dispatch = useDispatch();
     return(
         <div>
             <button 
@@ -16,6 +13,7 @@ const Button = ({ text = 'Button', color='white', bg='#6161fc', borderColor='#29
                     backgroundColor: bg, 
                     border: `2px solid ${borderColor}`
                 }}
+                onClick={() => dispatch({type: actionBtn})}
             >
                 {text}
             </button>

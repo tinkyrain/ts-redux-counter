@@ -1,8 +1,11 @@
-import './Counter.css'
+import { useTypedSelector } from '../hooks/useTypedSelector';
+import './Counter.css';
 
 const Counter = () => {
+    let { count } = useTypedSelector(state => state.count)
+    
     return(
-        <div className='counter'>0</div>
+        <div className='counter'>{count}</div>
     );
 }
 
